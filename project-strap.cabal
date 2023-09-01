@@ -1,32 +1,24 @@
-cabal-version:      2.4
-name:               project-strap
-version:            0.1.0.0
-synopsis:
+cabal-version:        2.4
+name:                 project-strap
+version:              0.1.0.0
+homepage:             https://github.com/ConnorDillon/project-strap
+license:              GPL-3.0-only
+license-file:         LICENSE
+author:               Connor Dillon
+maintainer:           connor@cdillon.nl
+category:             Language
 
--- A longer description of the package.
--- description:
-homepage:           https://github.com/ConnorDillon/project-strap
-
--- A URL where users can report bugs.
--- bug-reports:
-license:            GPL-3.0-only
-license-file:       LICENSE
-author:             Connor Dillon
-maintainer:         connor@cdillon.nl
-
--- A copyright notice.
--- copyright:
-category:           Language
-extra-source-files: CHANGELOG.md
-
-executable project-strap
+executable strap
     main-is:          Main.hs
-
-    -- Modules included in this executable, other than Main.
-    -- other-modules:
-
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
-    build-depends:    base ^>=4.16.4.0
     hs-source-dirs:   app
     default-language: Haskell2010
+    build-depends:
+      base ^>= 4.16.4.0,
+      text ^>= 2.0.2,
+      -- vector ^>= 0.13.0.0,
+      -- mtl ^>= 2.3.1
+      -- containers ^>= 0.6.7,
+      -- bytestring ^>= 0.11.4.0
+    default-extensions:
+      OverloadedStrings,
+      OverloadedLists
